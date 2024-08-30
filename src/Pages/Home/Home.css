@@ -1,0 +1,28 @@
+.outerDiv {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+  }
+  
+  .footer {
+    text-align: center;
+  }
+  
+  .tag {
+    font-size: 12px; 
+    font-weight: bold; 
+    margin: 0; 
+  }
+  
+  .madeBy {
+    font-size: 8px; 
+    margin: 0; 
+  }
+  
+  .footer p {
+    margin: 5px 0; 
+  }
+
+  /* #1876d2 */
+  
