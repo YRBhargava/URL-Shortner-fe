@@ -18,12 +18,19 @@ export default function Urls() {
     }
 
     const fetchUrlHistory=async()=>{
+        const accessToken=window.localStorage.getItem('accessToken')
         let response=null
         const userId=window.localStorage.getItem('userId')
 
         //---------------------Endpoint for hitting URL History API---------------
         try{
-            response=await axios.get(`http://127.0.0.1:8001/urlsHistory/${userId}/`)
+            response=await axios.get(`http://127.0.0.1:8001/urlsHistory/${userId}/`,
+            {
+              headers: {
+                Authorization: `Bearer ${accessToken}`
+              }
+            }
+            )
             handleSetUrls(response.data.urlsHistory)
         }catch(error){
             console.log(error)

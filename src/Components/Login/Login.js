@@ -45,11 +45,13 @@ export default function Login({stateChanger,isLoginChanger,nameChanger}) {
         window.localStorage.setItem('userId',response.data.userId)
         window.localStorage.setItem('name',response.data.name)
         
-      } else {
-        toast.error(response.data.message);
-      }
+      } 
+      // else {
+      //   toast.error(response.data.message);
+      // }
     } catch (error) {
-      toast.error(error.response.data.message);
+      console.log(error)
+      toast.error("Something is wrong! Please try again");
     }
 
     setEmail("");
