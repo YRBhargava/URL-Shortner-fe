@@ -82,9 +82,9 @@ export default function Navbar(props) {
                 ) : null}
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={2} >
               {isLogin === "no" ? (
-                <div style={{display:'flex', justifyContent:'space-between'}}>
+                <div style={{display:'flex', justifyContent:'center'}}>
                   <Button color="inherit" onClick={handleOpenLogin}>
                     Login
                   </Button>
@@ -96,7 +96,7 @@ export default function Navbar(props) {
                 <div
                   style={{ display: "flex", justifyContent:'space-evenly' , alignContent:'center'}}
                 >
-                  <div style={{display:'flex', justifyContent:'flex-start'}}>
+                  <div style={{display:'flex', justifyContent:'flex-start', alignItems:'center'}}>
                   <div>
                     <PersonIcon />
                   </div>
@@ -105,7 +105,7 @@ export default function Navbar(props) {
                   <div >{name}</div>
                   </div>
                   <div>
-                    <Button color="inherit" onClick={handleSignOut}>
+                    <Button color="inherit" onClick={handleSignOut} size='large'>
                       SignOut
                     </Button>
                   </div>

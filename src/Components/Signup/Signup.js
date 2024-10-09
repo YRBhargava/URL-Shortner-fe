@@ -58,7 +58,7 @@ export default function Signup() {
         let response=null
         //-----------------------------HIT SIGNUP API HERE----------------------------------------------------
         try{
-            response= await axios.post('http://127.0.0.1:8001/signup/',requestBody)
+            response= await axios.post(`${process.env.REACT_APP_API_URL}signup/`,requestBody)
             console.log(response)
         
             if(response.status==200){
