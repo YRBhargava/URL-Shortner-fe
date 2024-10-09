@@ -49,7 +49,7 @@ export default function Shortner() {
     let response = null;
     try {
       response = await axios.post(
-        "http://127.0.0.1:8001/shorten/",
+        `${process.env.REACT_APP_API_URL}shorten/`,
         requestBody,
         {
           headers: {
